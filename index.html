@@ -24,13 +24,45 @@
   <script src="jquery.easing.1.3.js"></script>
   <script src="rpsScript.js"></script>
   <link href="rpsStyle.css" rel="stylesheet" type="text/css" />
+  
+  	  
+	  $(function(){
+	//setting up some sample set sof things we can make a slot machine of
+	var numbers = ['500','1000','1500','2000','5000','switch','match','500','OT bomb','-500','1000','1500', 'x2', '÷2'];
+	var images = ['<img src="images/seven.png">','<img src="images/banana.png">','<img src="images/cherries.png">','<img src="images/lemon.png">','<img src="images/orange.png">','<img src="images/plum.png">','<img src="images/watermelon.png">'];
+	var misc = ['!','K','*','#','@','$'];
+	var callbackFunction = function(result){
+		alert(JSON.stringify(result));
+	}
+	
+	var ezslot1 = new EZSlots("ezslots1",{"reelCount":1,"startingSet":[0,0,0],"winningSet":[7,7,7],"symbols":numbers,"height":126,"width":250});
+	 
+	$("#gogogo1").click(function(){ console.log(ezslot1.spin());});
+		  });
+  
+  
 </head>
 
 <body>
   <img src="https://res.cloudinary.com/itsellej/image/upload/v1533400140/rock-paper-scissors/rock.png" alt="rock" width="100px" height="100px">
   <img src="https://res.cloudinary.com/itsellej/image/upload/v1533400143/rock-paper-scissors/paper.png" alt="paper" width="100px" height="100px">
   <img src="https://res.cloudinary.com/itsellej/image/upload/v1533400144/rock-paper-scissors/scissors.png" alt="scissors" width="100px" height="100px"><br>
-  <div id="game">
+   <h1 style="text-align:center; font-family:'Tahoma', sans-serif;">Rock Paper Scissors</h1>
+<div id="rpsGame">
+  <div class="studentNames">
+        <div id="question"><p>Student Names</p>
+          <form>
+        <input type="text" name="name1" id="name-box1" value="Name 1" style="border-width: 2px;" ><br>
+        <input type="text" name="name2" id="name-box2" value="Name 2" style="border-width: 2px;" ><br>
+          </form>
+		<input type="submit" onclick="getNames();" id="b1"></div>
+<div id="slotsGame">
+<div id="ezslots1"></div>
+<button id="gogogo1">spin</button>
+	  </div>
+</div>
+  </div>
+ <div id="game">
   <div class="playerOne" id="one">
     <p id="hand1"></p>
     <p><span id="player1"></span></p>
@@ -40,7 +72,43 @@
     <p><span id="player2"></span></p>
   </div>
 </div><br>
-  <button type="button" onclick="getNames();" id="rpsBtn">Let's Go!</button>
+	<!--
+	<div id="spinGame">
+		<div class="scoreChart">
+			<p id="team1Score"><span id="score1">0</span><br>
+			<span id="team1Leader">Team A</span></p>
+			<p id="team2Score"><span id="score2">0</span><br>
+			<span id="team2Leader">Team B</span></p>
+			<textarea id="team1" name="team1" rows="8" cols="15"></textarea>
+			<textarea class="team2" name="team2" rows="8" cols="15"></textarea>
+			<button id="makeTeamA" onclick="leaderSelectA()">Leaders</button>
+			<button id="switch" onclick="switchScores()">Switch</button>
+			<button id="bombA" onclick="bombATeam()">Bomb</button>
+			<button id="bombB" onclick="bombATeam()">Bomb</button>
+			<button id="500A" onclick="a500Team()">500</button>
+			<button id="500B" onclick="500BTeam()">500</button>
+			<button id="1000A" onclick="1000ATeam()">1000</button>
+			<button id="1000B" onclick="1000BTeam()">1000</button>
+			<button id="1500A" onclick="1500ATeam()">1500</button>
+			<button id="1500B" onclick="1500BTeam()">1500</button>
+			<button id="2000A" onclick="2000ATeam()">2000</button>
+			<button id="2000B" onclick="2000BTeam()">2000</button>
+			<button id="5000A" onclick="5000ATeam()">5000</button>
+			<button id="5000B" onclick="5000BTeam()">5000</button>
+			<button id="doubleA" onclick="doubleATeam()">double</button>
+			<button id="doubleB" onclick="doubleBTeam()">double</button>
+			<button id="halfA" onclick="halfATeam()">half</button>
+			<button id="halfB" onclick="halfBTeam()">half</button>
+			<button id="neg500A" onclick="neg500ATeam()">-500</button>
+			<button id="neg500B" onclick="neg500BTeam()">-500</button>
+			<button id="neg1000A" onclick="neg1000ATeam()">-1000</button>
+			<button id="neg1000B" onclick="neg1000BTeam()">-1000</button>
+			<button id="resetAll" onclick="reset()">Reset</button>
+		</div>
+		<div id="spinnerWheel">
+			<iframe src="https://wheeldecide.com/e.php?c1=2000&c2=half+your+points&c3=1500&c4=500&c5=-1000&c6=bomb+to+the+other+team&c7=1500&c8=5000&c9=copy+the+other+team%27s+points&c10=1000&c11=double+your+points&c12=-500&c13=switch&c14=1000&c15=bomb&c16=2000&c17=1500&c18=500&c19=1500&c20=1000&c21=switch&c22=1000&c23=1000&t=Points&time=5" width="500" height="500" scrolling="no" frameborder="0"></iframe>
+		</div>
+	</div> -->
   <!-- your content here... -->
 </body>
 </html>
