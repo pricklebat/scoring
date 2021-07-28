@@ -19,8 +19,8 @@
     if (rnd2 == 0) {
             rnd2 = 1;
     }
-     document.getElementById("hand1").innerHTML = ('<img class="who" src="' + myImages1[rnd1] + '">');
-     document.getElementById("hand2").innerHTML = ('<img class="who" src="' + myImages2[rnd2] + '">');
+     document.getElementById("hand1").innerHTML = ('<img class="who1" src="' + myImages1[rnd1] + '">');
+     document.getElementById("hand2").innerHTML = ('<img class="who2" src="' + myImages2[rnd2] + '">');
     }
 
 function startGame() {
@@ -40,8 +40,8 @@ function startGame() {
     if (rnd2 == 0) {
             rnd2 = 1;
     }
-     document.getElementById("hand1").innerHTML = ('<img class="who" src="' + myImages1[rnd1] + '">');
-     document.getElementById("hand2").innerHTML = ('<img class="who" src="' + myImages2[rnd2] + '">');
+     document.getElementById("hand1").innerHTML = ('<img class="who1" src="' + myImages1[rnd1] + '">');
+     document.getElementById("hand2").innerHTML = ('<img class="who2" src="' + myImages2[rnd2] + '">');
 }
 
  function leaderSelectA() {
