@@ -4,12 +4,12 @@
 	border:1px solid black;
 }
 	
-	#hand1 {
+	.who1 {
 	width: 100px;
 	height: 100px;
 	}
 
-	#hand2 {
+	.who2 {
 	width: 100px;
 	height: 100px;
 	}
