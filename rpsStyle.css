@@ -4,6 +4,16 @@
 	border:1px solid black;
 }
 	
+	#hand1 {
+	width: 100px;
+	height: 100px;
+	}
+
+	#hand2 {
+	width: 100px;
+	height: 100px;
+	}
+
 	.ezslots>.window{	
 	overflow:hidden;
 	display:inline-block;
